@@ -9,13 +9,24 @@ $(document).ready(function(){
     var quadrati = $('.tablecontainer').append('<div class="square"></div>');
   }
 
+
+  // crezione di un array vuoto da riempire con numeri randomici
+  var arrayRandomico = [];
+
   // creazione 15 numeri randomici
   for(j = 0; j < 15; j++) {
     var numRandom = Math.floor(Math.random() * (64 - 1) + 1);
     console.log(numRandom);
+
+    // associo ad ogni quadrato un numero randomico
+    var quadratoAssociato = $('div .square').get(numRandom);
+    
+    // verifico che ai quadrati sia associato un numero randomico
+    console.log(quadratoAssociato);
   }
 
-  // associo ad ogni quadrato un numero randomico
+
+
 
 
 
