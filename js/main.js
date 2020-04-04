@@ -20,12 +20,14 @@ $(document).ready(function(){
 
     // associo ad ogni quadrato un numero randomico
     var quadratoAssociato = $('div .square').get(numRandom);
-    
+
     // verifico che ai quadrati sia associato un numero randomico
     console.log(quadratoAssociato);
+
+    // aggiungo classe redWannabe a quadrato associato
+    $('.tablecontainer').find(quadratoAssociato).addClass('redWannabe');
+
   }
-
-
 
 
 
