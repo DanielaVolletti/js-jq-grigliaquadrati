@@ -9,14 +9,14 @@ $(document).ready(function(){
     var quadrati = $('.tablecontainer').append('<div class="square"></div>');
   }
 
+  // creo array vuoto contenente i futuri numeri random
+  var arrayNum = [];
 
-  // crezione di un array vuoto da riempire con numeri randomici
-  var arrayRandomico = [];
+  // faccio ciclo while fino a 15
+  while(arrayNum.length < 15){
 
-  // creazione 15 numeri randomici
-  for(j = 0; j < 15; j++) {
+    // creo 15 numeri random da 1 a 64
     var numRandom = Math.floor(Math.random() * (64 - 1) + 1);
-    console.log(numRandom);
 
     // associo ad ogni quadrato un numero randomico
     var quadratoAssociato = $('div .square').get(numRandom);
@@ -27,11 +27,13 @@ $(document).ready(function(){
     // aggiungo classe redWannabe a quadrato associato
     $('.tablecontainer').find(quadratoAssociato).addClass('redWannabe');
 
+    // se il numero random non è presente nell'array, lo aggiungo
+    if(arrayNum.indexOf(numRandom) === -1) {
+    arrayNum.push(numRandom);
+    }
+
   }
-
-
-
-
+  console.log(arrayNum);
 
 
   // variabile per tenere il punteggio dei Verdi VS Rossi
