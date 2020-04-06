@@ -16,7 +16,7 @@ $(document).ready(function(){
   while(arrayNum.length < 15){
 
     // creo 15 numeri random da 1 a 64
-    var numRandom = Math.floor(Math.random() * (64 - 1) + 1);
+    var numRandom = Math.floor(Math.random() * 64);
 
     // associo ad ogni quadrato un numero randomico
     var quadratoAssociato = $('div .square').get(numRandom);
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
     // se il numero random non è presente nell'array, lo aggiungo
     if(arrayNum.indexOf(numRandom) === -1) {
-    arrayNum.push(numRandom);
+      arrayNum.push(numRandom);
     }
 
   }
